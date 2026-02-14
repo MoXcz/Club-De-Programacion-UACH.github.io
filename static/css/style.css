@@ -104,3 +104,7 @@ article li code {
   padding: 0.15rem 0.35rem;
   border-radius: 4px;
 }
+
+.hidden {
+  display: none;
+}

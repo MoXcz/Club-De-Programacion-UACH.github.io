@@ -1,0 +1,30 @@
+{{define "main"}}
+
+<div id="loading" class="card">
+  <div class="spinner"></div>
+  <p>Cargando formulario...</p>
+</div>
+
+<div id="error-state" class="card hidden">
+  <h1>Error</h1>
+  <p id="error-message">No se pudo cargar el formulario.</p>
+  <button onclick="location.reload()">Reintentar</button>
+</div>
+
+<div id="form-container" class="card hidden">
+  <h1 id="event-title"></h1>
+  <p id="event-description" class="description"></p>
+  <form id="register-form">
+    <div id="fields"></div>
+    <button type="submit" id="submit-btn">Registrarme</button>
+    <p id="form-error" class="form-error hidden"></p>
+  </form>
+</div>
+
+<div id="success-state" class="card hidden">
+  <h1>¡Registro exitoso!</h1>
+  <p id="success-message"></p>
+</div>
+
+<script src="/js/form.js" defer></script>
+{{end}}

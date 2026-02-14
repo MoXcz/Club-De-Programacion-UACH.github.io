@@ -10,6 +10,14 @@
   {{ range .Pages }}
   <li>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span>
+      {{ with .Params.date }}
+      — {{ . | time.Format "02 Jan 2006" }}
+      {{ end }}
+      {{ with .Params.event_date }}
+      — {{ . | time.Format "02 Jan 2006" }}
+      {{ end }}
+    </span>
   </li>
   {{ end }}
 </ul>
